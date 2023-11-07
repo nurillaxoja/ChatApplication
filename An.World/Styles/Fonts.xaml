@@ -1,0 +1,33 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:An.World" xmlns:system="clr-namespace:System;assembly=System.Runtime">
+    <FontFamily x:Key="LatoRegular">
+        pack://application:,,,/Fonts/#Lato Regular 
+    </FontFamily>
+    <FontFamily x:Key="LatoThin">
+        pack://application:,,,/Fonts/#Lato Thin
+    </FontFamily>
+    <FontFamily x:Key="LatoBold">
+        pack://application:,,,/Fonts/#Lato Bold
+    </FontFamily>
+
+    <Style TargetType="{x:Type Control}" x:Key="BaseStyle">
+        <Setter Property="FontFamily" Value="{StaticResource LatoThin}" />
+    </Style>
+
+    <Style TargetType="{x:Type TextBlock}" x:Key="BaseTextBlockStyle">
+        <Setter Property="FontFamily" Value="{StaticResource LatoThin}" />
+    </Style>
+
+    <Style TargetType="Button" BasedOn="{StaticResource BaseStyle}" />
+    <Style TargetType="Label" BasedOn="{StaticResource BaseStyle}" />
+    <Style TargetType="TextBox" BasedOn="{StaticResource BaseStyle}" />
+    <Style TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}" />
+    <Style TargetType="ListView" BasedOn="{StaticResource BaseStyle}" />
+
+
+    <system:Double x:Key="FontSizeRegular">20</system:Double>
+    <system:Double x:Key="FontSizeSmall">14</system:Double>
+    <system:Double x:Key="FontSizeLarge"> 30</system:Double>
+
+</ResourceDictionary>
